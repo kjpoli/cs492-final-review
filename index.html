@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-05-09 Wed 20:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title></title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="poli" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgacb23cd">1. Processes</a>
+<ul>
+<li><a href="#orgad34929">1.1. Fork</a>
+<ul>
+<li><a href="#org718249d">1.1.1. Code with Print Statements</a></li>
+</ul>
+</li>
+<li><a href="#orgf5fa43b">1.2. Valid States</a></li>
+<li><a href="#org8637ce7">1.3. Threads</a>
+<ul>
+<li><a href="#org09b4f96">1.3.1. IPC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org968def3">2. Scheduling</a>
+<ul>
+<li><a href="#org5d95dd4">2.1. Jargon</a></li>
+<li><a href="#org1749fd9">2.2. Round Robin</a>
+<ul>
+<li><a href="#org8901c80">2.2.1. Advantages and Disadvantages</a></li>
+</ul>
+</li>
+<li><a href="#orgc090cb7">2.3. Priority</a>
+<ul>
+<li><a href="#orgcf2e962">2.3.1. Advantages and Disadvantages</a></li>
+<li><a href="#org30d4dbf">2.3.2. Assigning Priority</a></li>
+</ul>
+</li>
+<li><a href="#orgd7dfcb8">2.4. Small Note on SJF</a></li>
+<li><a href="#org6ff5227">2.5. Diverse Example</a></li>
+<li><a href="#orgfc1e087">2.6. Preemptive SJF Example</a></li>
+</ul>
+</li>
+<li><a href="#org278d787">3. Memory</a>
+<ul>
+<li><a href="#orga9e9b73">3.1. Memory Anatomy</a>
+<ul>
+<li><a href="#orgbe917e9">3.1.1. Page Table Entry Anatomy</a></li>
+</ul>
+</li>
+<li><a href="#org2475d96">3.2. Dynamics of Paged Virtual Memory</a>
+<ul>
+<li><a href="#org5084db6">3.2.1. Notes on Multi-leveling</a></li>
+</ul>
+</li>
+<li><a href="#org37fe45c">3.3. Examples</a>
+<ul>
+<li><a href="#org73fcc97">3.3.1. Solving for Physical addresses from virtual ones</a></li>
+<li><a href="#orgc7c442d">3.3.2. Modeling</a></li>
+</ul>
+</li>
+<li><a href="#orgef89e26">3.4. Page Replacement</a>
+<ul>
+<li><a href="#org9d4a57c">3.4.1. Algorithms</a></li>
+<li><a href="#orgad83b13">3.4.2. Demand Paging vs Prepaging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgacb23cd" class="outline-2">
+<h2 id="orgacb23cd"><span class="section-number-2">1</span> Processes</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-orgad34929" class="outline-3">
+<h3 id="orgad34929"><span class="section-number-3">1.1</span> Fork</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>parent retains pid, child gets pid 0</li>
+<li>build a tree</li>
+</ul>
+</div>
+<div id="outline-container-org718249d" class="outline-4">
+<h4 id="org718249d"><span class="section-number-4">1.1.1</span> Code with Print Statements</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<div class="org-src-container">
+<pre class="src src-C"><span style="color: #ECBE7B;">int</span> <span style="color: #c678dd;">main</span><span style="color: #51afef;">()</span> <span style="color: #51afef;">{</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">x</span> = <span style="color: #da8548; font-weight: bold;">5</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">y</span> = <span style="color: #da8548; font-weight: bold;">2</span>;
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">pid</span>;
+
+    x = fork<span style="color: #c678dd;">()</span>;
+    <span style="color: #51afef;">if</span><span style="color: #c678dd;">(</span>x == <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"x = %d\n"</span>, x<span style="color: #98be65;">)</span>;
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"y = %d\n"</span>, y<span style="color: #98be65;">)</span>;
+        pid = getpid<span style="color: #98be65;">()</span>;
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"I am process: %d\n"</span>, pid<span style="color: #98be65;">)</span>;
+    <span style="color: #c678dd;">}</span>
+    y = fork<span style="color: #c678dd;">()</span>;
+    <span style="color: #51afef;">if</span><span style="color: #c678dd;">(</span>y == <span style="color: #da8548; font-weight: bold;">0</span><span style="color: #c678dd;">){</span>
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"x = %d\n"</span>, x<span style="color: #98be65;">)</span>;
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"y = %d\n"</span>, y<span style="color: #98be65;">)</span>;
+        pid = getpid<span style="color: #98be65;">()</span>;
+        printf<span style="color: #98be65;">(</span><span style="color: #98be65;">"I am process: %d\n"</span>, pid<span style="color: #98be65;">)</span>;
+    <span style="color: #c678dd;">}</span>
+    <span style="color: #51afef;">return</span> <span style="color: #da8548; font-weight: bold;">0</span>;
+<span style="color: #51afef;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf5fa43b" class="outline-3">
+<h3 id="orgf5fa43b"><span class="section-number-3">1.2</span> Valid States</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Running, Ready, Waiting</li>
+<li>Running -&gt; Waiting, Ready</li>
+<li>Waiting -&gt; Ready</li>
+<li>Ready -&gt; Running</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8637ce7" class="outline-3">
+<h3 id="org8637ce7"><span class="section-number-3">1.3</span> Threads</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Processes Dont Share Memory</li>
+<li>Each thread has its own stack, true for Kernel and User level threads</li>
+<li>Implementing threads in user space can allow multithreaded programs running on any OS even one without native thread support, however system calls inside these threads might cause the OS to block without halting the entire process</li>
+<li>Register sets are per thread as they have values and local values that must be saved, each thread requires a register save area</li>
+</ul>
+</div>
+<div id="outline-container-org09b4f96" class="outline-4">
+<h4 id="org09b4f96"><span class="section-number-4">1.3.1</span> IPC</h4>
+<div class="outline-text-4" id="text-1-3-1">
+</div><ol class="org-ol"><li><a id="orga6a8b93"></a>Semaphores<br /><div class="outline-text-5" id="text-1-3-1-1">
+<ul class="org-ul">
+<li>UP - if there are sleeping processes, wake one(Chosen by scheduler)</li>
+<li>DOWN - If val &gt; 0, decrement and continue executing, else sleep</li>
+<li>These are atomic</li>
+</ul>
+</div>
+
+<ol class="org-ol"><li><a id="org5ca606a"></a>Producer Consumer Code<br /><div class="outline-text-6" id="text-1-3-1-1-1">
+<div class="org-src-container">
+<pre class="src src-c++"><span style="color: #ECBE7B;">void</span>* <span style="color: #c678dd;">consumer</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">void</span> *<span style="color: #dcaeea;">ptr</span><span style="color: #51afef;">){</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>;
+    <span style="color: #51afef;">for</span><span style="color: #c678dd;">(</span>i <span style="color: #ECBE7B;">in</span> <span style="color: #dcaeea;">max</span><span style="color: #c678dd;">){</span>
+        pthread_mutex_lock<span style="color: #98be65;">(</span>&amp;mutex<span style="color: #98be65;">)</span>;
+        <span style="color: #51afef;">while</span><span style="color: #98be65;">(</span>buffer == 0<span style="color: #98be65;">)</span> pthread_cond_wait<span style="color: #98be65;">(</span>&amp;condc, &amp;mutex<span style="color: #98be65;">)</span>;
+        buffer = 0;
+        pthread_cond_signal<span style="color: #98be65;">(</span>&amp;condp<span style="color: #98be65;">)</span>;
+        pthread_mutex_unlock<span style="color: #98be65;">(</span>&amp;mutex<span style="color: #98be65;">)</span>
+    <span style="color: #c678dd;">}</span>
+    pthread_exit<span style="color: #c678dd;">(</span>0<span style="color: #c678dd;">)</span>;
+<span style="color: #51afef;">}</span>
+<span style="color: #ECBE7B;">void</span>* <span style="color: #c678dd;">producer</span><span style="color: #51afef;">(</span><span style="color: #ECBE7B;">void</span> *<span style="color: #dcaeea;">ptr</span><span style="color: #51afef;">){</span>
+    <span style="color: #ECBE7B;">int</span> <span style="color: #dcaeea;">i</span>;
+    <span style="color: #51afef;">for</span><span style="color: #c678dd;">(</span>i <span style="color: #ECBE7B;">in</span> <span style="color: #dcaeea;">max</span><span style="color: #c678dd;">){</span>
+        pthread_mutex_lock<span style="color: #98be65;">(</span>&amp;mutex<span style="color: #98be65;">)</span>;
+        <span style="color: #51afef;">while</span><span style="color: #98be65;">(</span>buffer == 0<span style="color: #98be65;">)</span> pthread_cond_wait<span style="color: #98be65;">(</span>&amp;condc, &amp;mutex<span style="color: #98be65;">)</span>;
+        buffer = i;
+        pthread_cond_signal<span style="color: #98be65;">(</span>&amp;condp<span style="color: #98be65;">)</span>;
+        pthread_mutex_unlock<span style="color: #98be65;">(</span>&amp;mutex<span style="color: #98be65;">)</span>
+    <span style="color: #c678dd;">}</span>
+    pthread_exit<span style="color: #c678dd;">(</span>0<span style="color: #c678dd;">)</span>;
+</pre>
+</div>
+</div></li>
+<li><a id="org48c57b2"></a>Kernel Semaphores Question<br /><div class="outline-text-6" id="text-1-3-1-1-2">
+<p>
+<b>Can two threads in the same process synchronize using a kernel semaphore if the threads are implemented by the kernel? What if they are implemented in user space? Assume that no threads in any other processes have access to the semaphores.</b>
+</p>
+
+<p>
+With kernel threads, a thread can block on a semaphore and the kernel can run some other thread in the same process. Consequently, there is no problem using semaphores. With user-level threads, when one thread blocks on a semaphore, the kernel thinks the entire process is blocked and does not run it ever again. Consequently, the process fails.
+</p>
+</div></li></ol></li>
+
+<li><a id="orge6bdff5"></a>Monitors<br /><div class="outline-text-5" id="text-1-3-1-2">
+<p>
+<i>I miss erlang</i>
+programming language implementation of mutual exclusion that contains critical processes, manages their exclusion, and manages condition variables
+implements usually <b>Wait(&amp;cond)</b> and <b>Signal(&amp;cond)</b>
+</p>
+</div></li>
+<li><a id="orgb6c77a3"></a>Notes on Stoned Philosopher's Problem<br /><div class="outline-text-5" id="text-1-3-1-3">
+<p>
+N philosophers all must smoke two joints (they refuse otherwise)
+</p>
+</div>
+<ol class="org-ol"><li><a id="org01f6be0"></a>Stop Circular Wait Simply<br /><div class="outline-text-6" id="text-1-3-1-3-1">
+<ul class="org-ul">
+<li>restrict which joint can be picked, number each joint 1-5 arbitrarily and require each philosopher to grab the lower numbered rollie before taking the higher, the direction of the weight is likely to change thinkers are more likely to block with no joints than holding one indefinitely</li>
+</ul>
+</div></li>
+<li><a id="org76b06b7"></a>Hold and Wait/No Preemption<br /><div class="outline-text-6" id="text-1-3-1-3-2">
+<p>
+tinkers can be set to release resources after waiting a predetermined amount of time ( without extra work prone to livelock? )
+</p>
+</div></li>
+<li><a id="org6b85630"></a>Other Solutions*<br /><div class="outline-text-6" id="text-1-3-1-3-3">
+<p>
+When a thinker wants to smoke, they check both joints. If they are free, then they smoke. Otherwise, he/she waits on a condition variable. Whenever a philosopher finishes smoking, he/she checks to see if his neighbors want to smoke and are waiting. If so, then he/she calls signal on their condition variables so that they can recheck the chopsticks and eat if possible.
+</p>
+<ul class="org-ul">
+<li>This is a cannonical solution but technically prone to starvation as there may be outcomes where one philosopher is just excluded from a back and forth of philosophers accross the table
+<ul class="org-ul">
+<li>To fix this, have each stoner 'take a number' like at a deli when they want to smoke, only the one with the lowest number eats</li>
+</ul></li>
+</ul>
+</div></li></ol></li>
+<li><a id="orge347a74"></a>Deadlock Detection<br /><div class="outline-text-5" id="text-1-3-1-4">
+<ul class="org-ul">
+<li>If the resource request graph has no cycles theres no deadlock forreal
+<ul class="org-ul">
+<li>If there are cycles, one instance per resource type = deadlock, several cycles per type = possible deadlock</li>
+</ul></li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="orgfc95ce1"></a>Resource Allocation Graphs<br /><div class="outline-text-6" id="text-1-3-1-4-1">
+<ul class="org-ul">
+<li>Arrow from Proc to resource is a request</li>
+<li>Arrow From Resource to Proc is an assignment</li>
+</ul>
+</div></li>
+<li><a id="org06c01a6"></a>The Banker's Algorithm<br /><div class="outline-text-6" id="text-1-3-1-4-2">
+<p>
+Consider an allocation and request matrix, then trace it out
+Starting Resource Matrix C
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+<p>
+E = (24144)
+A = (01021)
+Request Matrix R
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Starting with each process ask if C+A &gt;= R
+</p>
+<ul class="org-ul">
+<li>P1 right away we cannot fufull the demand for P1 as both C[P1R1] and A[R1] are 0 while R[P1R1] is 1</li>
+<li>moving on to P2 we can fufill this request and release C[P2Rx] resources into A, making <b>A = (02031)</b></li>
+<li>moving into P3 we again can fufill this request releasing C into A making *A = (02032)</li>
+<li>on P4 now it cannot be fufilled as 1R3 is requested and it is 0 in both C and A</li>
+<li>double checking P1 we still cannot satisfy P1R1</li>
+<li>With nowhere to go, we have <b>DEADLOCKED</b></li>
+</ul>
+</div></li></ol></li></ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org968def3" class="outline-2">
+<h2 id="org968def3"><span class="section-number-2">2</span> Scheduling</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-org5d95dd4" class="outline-3">
+<h3 id="org5d95dd4"><span class="section-number-3">2.1</span> Jargon</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><b>Pre-emptive:</b> will suspend the running process to switch</li>
+<li><b>Response Time:</b> Time from issue to first response</li>
+<li><b>turnaround-time</b>: Avg time for job completion</li>
+<li><b>overhead</b>: you generally want to reduce overhead from context switching</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1749fd9" class="outline-3">
+<h3 id="org1749fd9"><span class="section-number-3">2.2</span> Round Robin</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>each process runs a specified time quantum
+<ul class="org-ul">
+<li>after which the processis preempted and added to the end of the ready queue</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org8901c80" class="outline-4">
+<h4 id="org8901c80"><span class="section-number-4">2.2.1</span> Advantages and Disadvantages</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li><b>Solution to fairness and starvation</b></li>
+<li><b>low avg waiting when job lengths vary</b></li>
+<li><b>responsive for a small number of jobs</b></li>
+<li><i>bad when all jobs same length</i></li>
+<li><i>context switching can be expensive and adds up over long jobs</i></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc090cb7" class="outline-3">
+<h3 id="orgc090cb7"><span class="section-number-3">2.3</span> Priority</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Execute highest priority runnable jobs to completion. Priorities take the form of separate queues, each queue can be round robbin'd as well
+</p>
+</div>
+<div id="outline-container-orgcf2e962" class="outline-4">
+<h4 id="orgcf2e962"><span class="section-number-4">2.3.1</span> Advantages and Disadvantages</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<ul class="org-ul">
+<li><b>control over important jobs</b></li>
+<li><b>individual priority queues can implement another scheduling algorithm</b></li>
+<li><i>Starvation: low priority jobs can starve cause high ones are always running</i></li>
+<li><i>Deadlock Priority Inversion: happens when low priority task has a lock needed by a high priority task, also called busy waiting</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30d4dbf" class="outline-4">
+<h4 id="org30d4dbf"><span class="section-number-4">2.3.2</span> Assigning Priority</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<ul class="org-ul">
+<li>Statically based on proctype</li>
+<li>1/f where f is the last used quantum
+<ul class="org-ul">
+<li>the longer a proccess ran the lower its priority</li>
+<li>the next process that runs shortest gets highest priority to run next</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7dfcb8" class="outline-3">
+<h3 id="orgd7dfcb8"><span class="section-number-3">2.4</span> Small Note on SJF</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+SJF will run the job with the least amount of computation to do, there exists a preemptive version called Shortest Remaining Time First that will preempt a process
+</p>
+</div>
+</div>
+<div id="outline-container-org6ff5227" class="outline-3">
+<h3 id="org6ff5227"><span class="section-number-3">2.5</span> Diverse Example</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Jobs A-3 with respective running times [10,6,2,4,8] and priorities [3,5,2,1,4], for each algorithm lets find mean turnaround time assuming no overhead
+</p>
+<ul class="org-ul">
+<li>Round Robin
+<ul class="org-ul">
+<li>for 10 minutes each job gets 1/5 of the CPU, causing C to finish.</li>
+<li>during the next 8 minutes, 1/4 of the CPU, D will finish</li>
+<li>during the next 6 minutes each gets 1/3, B will finish</li>
+<li>during the next 4 minutes its half and half, E will finish</li>
+<li>finally A finishes</li>
+<li>times then become [10,18,24,28,30] with an avg of 22 minutes</li>
+</ul></li>
+<li>Priority
+<ul class="org-ul">
+<li>in order run B (6 minutes), E ( 8min ), A(10), C (2), D (4) finishing at [6,14,24,26,30] for an avg of 20mins</li>
+</ul></li>
+<li>FCFS
+<ul class="org-ul">
+<li>ran all in order they finish at [10,16,18,22,30] for an avg of 19.2mins</li>
+</ul></li>
+<li>SJF
+<ul class="org-ul">
+<li>will yield [2,6,12,20,30] for an avg of 14mins (winner)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfc1e087" class="outline-3">
+<h3 id="orgfc1e087"><span class="section-number-3">2.6</span> Preemptive SJF Example</h3>
+<div class="outline-text-3" id="text-2-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Proc</th>
+<th scope="col" class="org-right">Arrival</th>
+<th scope="col" class="org-right">CPUTime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">P1</td>
+<td class="org-right">0</td>
+<td class="org-right">7</td>
+</tr>
+
+<tr>
+<td class="org-left">P2</td>
+<td class="org-right">2</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">P3</td>
+<td class="org-right">4</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">P4</td>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>P1 arrives right away, and runs for 2min, P1 has 5min remaining but P2 has arrived and is shorter we preempt with the current scheme [5,4,1,4]</li>
+
+<li>P2 can run for 2 more minutes before being preempted by P3 with times [5,2,1,4]</li>
+
+<li><b>P3 Completes at time t = 5</b> times = [5,2,4]</li>
+
+<li>preempt for <b>P2 Completes at time t = 7</b> times = [5,4]</li>
+
+<li><b>P4 completes at time t = 11</b></li>
+
+<li><b>P1 completes at time t = 16</b></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org278d787" class="outline-2">
+<h2 id="org278d787"><span class="section-number-2">3</span> Memory</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-orga9e9b73" class="outline-3">
+<h3 id="orga9e9b73"><span class="section-number-3">3.1</span> Memory Anatomy</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>\(n\) bit virtual address space</li>
+<li>\(2^n\) virtual addressess in total
+<ul class="org-ul">
+<li>Each page consists of \(2^k\) virtual addresses</li>
+</ul></li>
+<li>virtual age number takes \((n-k)\) bits
+<ul class="org-ul">
+<li>with \(2^{n-k}\) virtual pages</li>
+<li>with \(2^{n-k}\) entries in the page table</li>
+<li>you probably noticed these are the same</li>
+</ul></li>
+<li>physical address of \(m\) bits
+<ul class="org-ul">
+<li>\(2^m\) physical addresses in total</li>
+</ul></li>
+<li>Page frame number takes \((m-k)\) bits
+<ul class="org-ul">
+<li>with \(2^{m-k}\) physical pages</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgbe917e9" class="outline-4">
+<h4 id="orgbe917e9"><span class="section-number-4">3.1.1</span> Page Table Entry Anatomy</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>Page frame # : physical page frame where the virtual page is located</li>
+<li>valid bit: is the page loaded into main memory</li>
+<li>protection: read/write/execute</li>
+<li>dirty bit: has the page been modified
+<ul class="org-ul">
+<li>if yes, write back to the disk when the page is swapped out</li>
+</ul></li>
+<li>Referenced: page replacement algorithm will decide whether not to swap it</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2475d96" class="outline-3">
+<h3 id="org2475d96"><span class="section-number-3">3.2</span> Dynamics of Paged Virtual Memory</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Each program carries its own address space, broken up into pages, not all pages have to be in physical memory to run the program. 
+Page switching is hidden, processes see an address space, and movement of information to and from the disk is the job of the OS.
+VM isolates processes, one process cannot access memory addressess in another. Hardware for this is the Memory Management Unit and Translation Lookaside Buffer
+<b>in the <i>virtual address space</i>: a sequence of <i>pages</i>, in the <i>physical memory</i>: a sequence of <i>page frames</i></b>
+</p>
+</div>
+
+<div id="outline-container-org5084db6" class="outline-4">
+<h4 id="org5084db6"><span class="section-number-4">3.2.1</span> Notes on Multi-leveling</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+cant hold all the page tables in memory? page them ! (fuck)
+divides the virtual address into 3 portions, primary page bits, secondary bits and offset bits
+see <a href="#orgc7c442d">3.3.2</a>Assuming all the same information (1 level page table takes 4mb)
+Lets now assume the 32 bit space is allocated [5 primary pg, 15 secondary pg, 12 offset]
+</p>
+<ul class="org-ul">
+<li>Each 1 level page table will have \(2^5\) primary addresses of 4B each (128B)</li>
+<li>Each 2 level page table will have \(2^15\) secondary addresses of 4B each (128KB)</li>
+</ul>
+<ul class="org-ul">
+<li>The total page table size is now a 128B primary page table referencing 32 128KB secondary page tables (4MB + 128B)</li>
+<li>One translation only needs 1 page from each, 128KB + 128B</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org37fe45c" class="outline-3">
+<h3 id="org37fe45c"><span class="section-number-3">3.3</span> Examples</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-org73fcc97" class="outline-4">
+<h4 id="org73fcc97"><span class="section-number-4">3.3.1</span> Solving for Physical addresses from virtual ones</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Given a page table diagram, lets find a physical address
+for example lets find the physical address of 8300 vm
+since it lives in the page 8k-&gt;12kvm, mapped to 24k-&gt;28kpm
+simply its gonna live at \(24k + (8300-8k)\)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7c442d" class="outline-4">
+<h4 id="orgc7c442d"><span class="section-number-4">3.3.2</span> Modeling</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Consider a 32 bit virtual space, each page with 4096 addresses, assume each PTE takes 4 bytes
+</p>
+<ul class="org-ul">
+<li>Size of the page table per process($2<sup>n-k</sup>): \(2^{32-12}\) = \(2^20\) entries in the table, 1mb, with 4 bytes each it will be 4mb total</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgef89e26" class="outline-3">
+<h3 id="orgef89e26"><span class="section-number-3">3.4</span> Page Replacement</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Memory of course fills up on systems, inactive pages have to get moved to disk, and active ones have to get shuffled back into fast main memory
+</p>
+<ul class="org-ul">
+<li>Effective Access Time (where p is the page fault rate)
+<ul class="org-ul">
+<li>\((1 - p) *\) memory access +
+<ul class="org-ul">
+<li>\(p(\) fault overhead +</li>
+<li>swap out overhead +</li>
+<li>swap in overhead +</li>
+<li>restart overhead \()\)</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org9d4a57c" class="outline-4">
+<h4 id="org9d4a57c"><span class="section-number-4">3.4.1</span> Algorithms</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>Belady's anomaly, some algorithm's fault rate increases with more memory
+<ul class="org-ul">
+<li>FIFO</li>
+</ul></li>
+</ul>
+</div>
+<ol class="org-ol"><li><a id="org18f7659"></a>FIFO<br /><div class="outline-text-5" id="text-3-4-1-1">
+<p>
+first in first out, stupid simple
+</p>
+<ul class="org-ul">
+<li>Second Chance Variant
+<ul class="org-ul">
+<li>consider reference bit R
+<ul class="org-ul">
+<li>if R = 0, replace page</li>
+<li>if R = 1, set r = 0, place at the end of queue</li>
+</ul></li>
+<li>if not enough replaces on pass 1 revert to straight FIFO</li>
+</ul></li>
+<li>Clock Variant
+<ul class="org-ul">
+<li>Better implementation of second chance dynamics</li>
+<li>uses a circular buffer for references to likely be near eachother</li>
+</ul></li>
+</ul>
+</div></li>
+<li><a id="org9c8a821"></a>LRU<br /><div class="outline-text-5" id="text-3-4-1-2">
+<p>
+evicts the least recently used
+</p>
+<ul class="org-ul">
+<li>can implement Aging for a cheaper solution
+<ul class="org-ul">
+<li>reduce counter values over time by dividing by 2 (1 right shift)</li>
+<li>add R to the leftmost bit</li>
+<li>the right shifts that occur over time being offset by the additional digits gives increasing weight to recently used pages and fequently used pages</li>
+<li>counter can be limited in bits and create a short memory however</li>
+</ul></li>
+</ul>
+</div></li></ol>
+</div>
+<div id="outline-container-orgad83b13" class="outline-4">
+<h4 id="orgad83b13"><span class="section-number-4">3.4.2</span> Demand Paging vs Prepaging</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<ul class="org-ul">
+<li>we want to reduce page faults and eliminate <i>trashing</i> when processes are speding more time paging than executing</li>
+</ul>
+
+<p>
+each process has a <i><b>working set</b></i> of pages it is currently using, to try and zero in on this working set we can page in groups ahead of time
+</p>
+
+<ul class="org-ul">
+<li>If R = 0 (candidate for removal)
+<ul class="org-ul">
+<li>age = curtime - lastused
+<ul class="org-ul">
+<li>if age &gt; threshold page is replaced</li>
+<li>if age &lt; threshold, keep it in the working set but if remove it if its the oldest page in the working set</li>
+</ul></li>
+<li>If R = 1, set time of last use = curtime</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: poli</p>
+<p class="date">Created: 2018-05-09 Wed 20:24</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
